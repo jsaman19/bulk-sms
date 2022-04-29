@@ -5,20 +5,8 @@ This is an example Android Application README to show briefly the sections your 
 ## Installation
 Clone this repository and import into **Android Studio**
 ```bash
-git clone git@github.com:wolox/<reponame>.git
+git git@github.com:jsaman19/bulk-sms.git
 ```
-
-## Configuration
-### Keystores:
-Create `app/keystore.gradle` with the following info:
-```gradle
-ext.key_alias='...'
-ext.key_password='...'
-ext.store_password='...'
-```
-And place both keystores under `app/keystores/` directory:
-- `playstore.keystore`
-- `stage.keystore`
 
 
 ## Build variants
