@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/url_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Information API URL"/>
+
+
+    <EditText
+        android:id="@+id/pattern_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="4"
+        android:layout_below="@id/url_txt"
+        android:hint="Pattern"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/key_values_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pattern_txt"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_another_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add another Key/Value"
+        android:onClick="addAnOtherKeyValueLyt"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/key_values_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/add_another_btn"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/send_btn_sim1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Send With sim1"
+            android:onClick="sendWithSim1"
+            android:layout_weight="1"
+            />
+        <Space
+            android:id="@+id/send_btn_divider"
+            android:layout_width="10dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/send_btn_sim2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Send With sim2"
+            android:onClick="sendWithSim2"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
