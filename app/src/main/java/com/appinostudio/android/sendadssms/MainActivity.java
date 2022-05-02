@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                             users) {
                         Thread.sleep(1000);
                         String smsText = getMessage(user);
-//                        sendSmsMsgFnc(user.getMobile(), smsText, selectedSim);
+                        sendSmsMsgFnc(user.getMobile(), smsText, selectedSim);
                         dialog.setProgress(counter[0]);
                         counter[0]++;
                     }
