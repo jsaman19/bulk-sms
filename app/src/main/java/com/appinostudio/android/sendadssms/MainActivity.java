@@ -153,7 +153,9 @@ public class MainActivity extends AppCompatActivity {
     void sendSmsMsgFnc(String mblNumVar, String smsMsgVar, int sim_id) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
             try {
-                SmsManager.getSmsManagerForSubscriptionId(sim_id).sendTextMessage(mblNumVar, null, smsMsgVar, null, null);
+                SmsManager smsManager = SmsManager.getSmsManagerForSubscriptionId(sim_id);
+                ArrayList<String> msgArray = smsManager.divideMessage(smsMsgVar);
+                SmsManager.getSmsManagerForSubscriptionId(sim_id).sendMultipartTextMessage(mblNumVar, null, msgArray, null, null);
                 Toast.makeText(getApplicationContext(), "Message Sent",
                         Toast.LENGTH_LONG).show();
             } catch (Exception ErrVar) {
